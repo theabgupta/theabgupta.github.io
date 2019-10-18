@@ -1,0 +1,115 @@
+@font-face {
+  font-family: 'WaltographRegular';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local('WaltographRegular'),
+    url('../../../../public/assets/fonts/waltograph42.otf') format('opentype');
+}
+
+
+#hello {
+	display: block;
+
+	.hello-wrapper {
+		margin-top: 50px;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-bottom: 100px;
+		@media (max-width: 992px) {
+			margin-top: 100px;
+			margin-left: 0px;
+			right: 0;
+		}
+
+		.title {
+			font-size: 15em;
+			margin-bottom: 15px;
+			font-family: 'Pompiere', 'WaltographRegular';
+			font-weight: bold;
+			font-style: normal;
+			@media (max-width: 921px) {
+				font-size: 8em;
+			}
+		}
+
+		.subtitle {
+			line-height: .9em;
+			font-size: 4em;
+			margin-top: 0;
+			margin-bottom: 40px;
+		}
+
+		.tagline {
+			font-size: 1.8em;
+			letter-spacing: 0.2em;
+			line-height: 1.3em;
+			font-weight: normal;
+			margin-bottom: 40px;
+			color: #444444;
+			font-family: 'Acme';
+		}
+
+		*, *:after, *::before {
+		    -webkit-box-sizing: border-box;
+		    	 -moz-box-sizing: border-box;
+		    				box-sizing: border-box;
+		}
+
+		.resume a {
+			font-family: 'Raleway', sans-serif;
+			position: relative;
+			display: inline-block;
+			margin: 15px 25px;
+			outline: none;
+			color: #333333;
+			text-decoration: none;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			font-weight: 400;
+			text-shadow: 0 0 1px rgba(255,255,255,0.3);
+			font-size: 2.0em;
+			padding: 25px 40px;
+
+			&:hover {
+				outline: none;
+				&::before {
+					opacity: 0;
+					-webkit-transform: translateY(5px) translateX(0px);
+						 -moz-transform: translateY(5px) translateX(0px);
+						 			transform: translateY(5px) translateX(0px);
+				}
+				&::after  {
+					opacity: 1;
+					-webkit-transform: translateY(0px) translateX(0px);
+						 -moz-transform: translateY(0px) translateX(0px);
+						 			transform: translateY(0px) translateX(0px);
+				}
+			}
+			&::before, &::after  {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+        border: 4px solid #111111;
+        @media (min-width: 992px) {
+  				border: 4px solid #666666;
+          -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  					 -moz-transition: -moz-transform 0.5s, opacity 0.5s;
+  					 			transition: transform 0.5s, opacity 0.5s;
+        }
+				content: '';
+			}
+			&::after  {
+				border-color: #111111;
+				opacity: 0;
+        @media (min-width: 992px) {
+  				-webkit-transform: translateY(-14px) translateX(12px);
+  				   -moz-transform: translateY(-14px) translateX(12px);
+  				        transform: translateY(-14px) translateX(12px);
+        }
+			}
+		}
+	}
+}

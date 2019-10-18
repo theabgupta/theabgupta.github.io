@@ -1,0 +1,148 @@
+.contacts-wrapper {
+	margin-top: 50px;
+	margin-left: 0px;
+	margin-bottom: 50px;
+	@media (max-width: 992px) {
+		margin-top: 100px;
+		margin-left: 0px;
+		right: 0;
+	}
+
+	.box2 {
+		background-color: rgba(255,255,255,0.1);
+		height: 300px;
+		margin-left: 15px;
+		margin-right: 15px;
+		margin-top: 30px;
+		margin-bottom: 20px;
+		padding: 20px;
+		border: 3px solid #111111;
+		border-radius: 40px;
+		@media (max-width: 992px) {
+			height: 250px;
+		}
+
+		.block {
+			position: relative;
+
+			.address {
+				font-family: 'Darker Grotesque';
+				font-weight: normal;
+				line-height: .9em;
+				font-size: 4em;
+				margin-top: 0;
+				margin-bottom: 40px;
+				color: #222222;
+				@media (max-width: 992px) {
+					font-size: 3em;
+				}
+			}
+
+			.address-text {
+				font-family: 'Raleway', sans-serif;
+				font-weight: 500;
+				color: #222222;
+				font-size: 1.3em;
+				@media (max-width: 992px) {
+					font-size: 1.1em;
+				}
+			}
+		}
+	}
+
+	.btn {
+		color: #111111;
+		text-shadow: none;
+		text-decoration: none;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		border: 0 none;
+		&:hover {
+			color: #111111;
+		}
+
+		.box1 {
+			background-color: rgba(255,255,255,0.1);
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: auto;
+			padding: 10px;
+			border: 2px solid #111111;
+			border-radius: 10px;
+
+			.blue-btn {
+				@extend .transition;
+				height: 30px;
+				align: center;
+				font: normal normal 80 1em/4em;
+				font-family: 'Raleway', sans-serif;
+				font-size: 1.8em;
+				overflow: hidden;
+				width: 180px;
+				&:hover .first-link {
+				  	margin-top: -1.2em;
+				}
+
+				a {
+				  	color: #111111;
+				  	text-decoration: none;
+				  	text-align: center;
+				  	display: block;
+						font-size: 0.6em;
+						font-weight: 700;
+				  	&:hover {
+					  	text-decoration: none;
+					}
+				}
+
+				.first-link {
+					@extend .transition;
+					margin-top: -0.15em;
+				}
+			}
+		}
+	}
+
+	.social-icons {
+		padding-top: 20px;
+
+		.list-social {
+			.btn {
+				font-size:1.3em;
+				&:hover, &:active, &:focus {
+					text-decoration: none;
+				}
+			}
+
+			.grow {
+				@media (min-width: 992px) {
+					transition: all .2s ease-in-out;
+					&:hover {
+						transform: scale(2);
+					}
+				}
+				@media (max-width: 992px) {
+					float: center;
+				}
+			}
+		}
+	}
+
+	footer {
+		font: 100% 'Oswald', sans-serif;
+		font-size: 1.2em;
+	  text-align: center;
+		color: #333333;
+		margin-top: 30px;
+	}
+}
+
+
+.transition {
+	-webkit-transition: 0.3s;
+	   -moz-transition: 0.3s;
+	    -ms-transition: 0.3s;
+	     -o-transition: 0.3s;
+	        transition: 0.3s;
+}
